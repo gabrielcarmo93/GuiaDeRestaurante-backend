@@ -18,7 +18,7 @@
 const Route = use('Route')
 
 Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
+  return { Application: 'Guia de Restaurante' }
 })
 
 Route.post('/register', 'AuthController.register')
