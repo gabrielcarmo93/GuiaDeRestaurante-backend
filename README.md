@@ -1,7 +1,28 @@
-# Code Institute
+# Adonis API application
 
-Welcome USER_NAME,
+This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
 
-Use this workspace template when you need the Heroku command-line tools. Type `heroku` in the terminal window to run the Heroku toolbelt.
+1. Bodyparser
+2. Authentication
+3. CORS
+4. Lucid ORM
+5. Migrations and seeds
 
-Happy coding!
+## Setup
+
+Use the adonis command to install the blueprint
+
+```bash
+adonis new yardstick --api-only
+```
+
+or manually clone the repo and then run `npm install`.
+
+
+### Migrations
+
+Run the following command to run startup migrations.
+
+```js
+adonis migration:run
+```
