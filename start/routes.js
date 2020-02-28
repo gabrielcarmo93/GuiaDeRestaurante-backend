@@ -35,5 +35,6 @@ Route.group(() => {
 }).middleware('auth')
 
 
-Route.post('upload/:id', 'FileController.store')
-Route.get('upload', 'FileController.view')
+Route.post('upload', 'FileController.store')
+Route.get('upload/:id/:filename', 'FileController.view')
+Route.get('upload/:id', 'FileController.listFiles')
