@@ -59,7 +59,7 @@ class FileController {
   }
 
   async listFiles ({ request, params, response }) {
-    // console.log(Helpers.publicPath())
+    console.log(process.env)
     const id = params.id
     const path = `${Helpers._appRoot}/uploads/restaurant_${id}/`
     const readFiles = fs.readdirSync(path)
