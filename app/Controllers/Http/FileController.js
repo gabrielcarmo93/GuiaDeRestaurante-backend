@@ -66,7 +66,7 @@ class FileController {
     const files = []
 
     readFiles.forEach((el, i, node) => {
-      el = `${process.env.APP_URL}/upload/${id}/${el}`
+      el = `${Helpers._appRoot}/upload/${id}/${el}`
       files.push(el)
     })
     
