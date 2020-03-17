@@ -21,6 +21,10 @@ Route.get('/', () => {
   return { Application: 'Guia de Restaurante' }
 })
 
+Route.get('/welcome/:name', () => {
+  return { welcome: `Seja bem vindo(a) ${name}!` }
+})
+
 Route.post('/register', 'AuthController.register')
 Route.post('/authenticate', 'AuthController.authenticate')
 
