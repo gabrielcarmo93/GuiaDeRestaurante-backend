@@ -58,7 +58,8 @@ class FileController {
     return response.download(finalPath)
   }
 
-  async listFiles ({ params, response }) {
+  async listFiles ({ request, params, response }) {
+    console.log(request.readable)
     const id = params.id
     const path = `${Helpers._appRoot}/uploads/restaurant_${id}/`
     const readFiles = fs.readdirSync(path)
