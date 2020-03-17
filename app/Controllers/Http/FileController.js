@@ -59,14 +59,14 @@ class FileController {
   }
 
   async listFiles ({ request, params, response }) {
-    console.log(request.readable)
+    // console.log(Helpers.publicPath())
     const id = params.id
     const path = `${Helpers._appRoot}/uploads/restaurant_${id}/`
     const readFiles = fs.readdirSync(path)
     const files = []
 
     readFiles.forEach((el, i, node) => {
-      el = `${Env.get('APP_URL')}/upload/${id}/${el}`
+      el = `${process.env.APP_URL}/upload/${id}/${el}`
       files.push(el)
     })
     
