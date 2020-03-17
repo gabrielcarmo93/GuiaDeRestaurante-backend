@@ -70,7 +70,10 @@ class FileController {
       files.push(el)
     })
     
-    return files
+    return {
+      "process": process.env,
+      files
+    }
   }
 }
 
